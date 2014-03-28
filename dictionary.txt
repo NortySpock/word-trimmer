@@ -1,4 +1,3 @@
-startling
 starting
 staring
 string
