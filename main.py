@@ -14,7 +14,7 @@ for i in range(len(starting_word)):
    # print ("start half:", starting_word[:i])
    # print ("i         :", starting_word[i]
    # print ("end   half:", starting_word[i:])
-   print (str(starting_word[:i] + " " + starting_word[i:]))
+   print (str(starting_word[:i] + starting_word[i+1:]))
    # word_subset.append(str(starting_word[:i] + starting_word[i:]))
 
 input("waiting for input to  close...")
