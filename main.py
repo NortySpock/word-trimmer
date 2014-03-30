@@ -9,24 +9,24 @@ smaller_word = ''
 
 list_of_subwords = []
 
-f = open('9words.txt', 'r')
-for line in f:
-  master_word_list.append(line.strip())
+f = open('dictionary.txt.txt', 'r')
+for line in f:  
+  my_dictionary.append(line.strip())
 f.close()
 
-f = open('8_chars_or_less.txt','r')
-for line in f:
-  my_dictionary.append(line)
 
 starting_word = "startling"
 current_word = deepcopy(starting_word)
 
-outfile = open('list_of_9_char_words_and_subwords.txt', 'w')
+#outfile = open('list_of_9_char_words_and_subwords.txt', 'w')
 
 
 # def find_awesome_word():
 
-# def find_subword():
+def find_subword(word_in, existing_list, dictionary_in):
+  word_subset = []
+  for i in range(len(word_in)):
+    word_subset.append(str(current_word[:i] + current_word[i+1:]))
   
 
 
@@ -61,6 +61,6 @@ while 1:
     list_of_subwords.clear()
     break
 
-outfile.close()
+#outfile.close()
 
 input("waiting for input to  close...")
