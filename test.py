@@ -12,7 +12,7 @@ def find_subword(word_in, existing_list, dictionary_in):
  
   for i in word_subset:
     if i in dictionary_in:
-      existing_list.append(i)
+      existing_list.append((word_in,i))
       find_subword(i,existing_list,dictionary_in)
  
   return existing_list
