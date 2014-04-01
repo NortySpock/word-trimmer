@@ -2,16 +2,16 @@ import sys
 from copy import deepcopy
 
 master_word_list = []
-my_dictionary = []
+my_dictionary = set()
 word_subset = []
 found_smaller_word = 0
 smaller_word = ''
 
 list_of_subwords = []
 
-f = open('dictionary.txt.txt', 'r')
+f = open('dictionary.txt', 'r')
 for line in f:  
-  my_dictionary.append(line.strip())
+  my_dictionary.add(line.strip())
 f.close()
 
 
@@ -49,7 +49,7 @@ while 1:
     if found_smaller_word:
       break
         
-  word_subset.clear()
+  word_subset = []
   if found_smaller_word:
     current_word = deepcopy(smaller_word)
   elif len(current_word) <= 1:
@@ -58,7 +58,7 @@ while 1:
     break
   else:
     print("Failed:"+current_word)
-    list_of_subwords.clear()
+    list_of_subwords = []
     break
 
 #outfile.close()
