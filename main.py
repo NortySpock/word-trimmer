@@ -29,8 +29,8 @@ def find_subword(word_in, existing_list, dictionary_in):
   
 
 
-
-while 1:
+done = False
+while not done:
   for i in range(len(current_word)):
     word_subset.append(str(current_word[:i] + current_word[i+1:]))
 
@@ -54,11 +54,11 @@ while 1:
     print("Success! " + current_word)
     
     #outfile.write()    
-    break
+    done = True
   else:
     print("Failed:"+current_word)
     list_of_subwords = []
-    break
+    done = True
 
 #outfile.close()
 
