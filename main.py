@@ -18,7 +18,7 @@ f.close()
 starting_word = "startling"
 current_word = deepcopy(starting_word)
 
-#outfile = open('list_of_9_char_words_and_subwords.txt', 'w')
+#outfile = open('output.txt', 'w')
 
 
 # def find_awesome_word():
@@ -54,7 +54,8 @@ while 1:
     current_word = deepcopy(smaller_word)
   elif len(current_word) <= 1:
     print("Success! " + current_word)
-    outfile.write()
+    
+    #outfile.write()    
     break
   else:
     print("Failed:"+current_word)
