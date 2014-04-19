@@ -1,7 +1,6 @@
 import sys
 from copy import deepcopy
 
-master_word_list = []
 my_dictionary = set()
 word_subset = []
 found_smaller_word = 0
@@ -39,13 +38,12 @@ while 1:
     
   found_smaller_word = 0
   for i in word_subset: 
-    for j in master_word_list:
-      if str(i) == str(j):
-        print('FOUND_SMALLER_WORD!')
-        found_smaller_word = 1
-        smaller_word = str(i)
-        list_of_subwords.append(smaller_word)
-        break
+    if i in my_dictionary:
+      print('found smaller word: ' + i)
+      found_smaller_word = 1
+      smaller_word = str(i)
+      list_of_subwords.append(smaller_word)
+      break
     if found_smaller_word:
       break
         
@@ -64,4 +62,4 @@ while 1:
 
 #outfile.close()
 
-input("waiting for input to  close...")
+#input("waiting for input to close...")
