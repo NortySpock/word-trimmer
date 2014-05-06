@@ -1,0 +1,5 @@
+This attempts to solve the following puzzle: "Given a word, subtract a 
+single letter one at a time such that the resulting string is also a 
+word, continuing in this vein until you get down to a single 
+letter word."
+
