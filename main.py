@@ -9,10 +9,16 @@ smaller_word = ''
 list_of_subwords = []
 
 f = open('dictionary.txt', 'r')
-for line in f:  
-  my_dictionary.add(line.strip())
+for line in f:
+  strip_line = line.strip().lower()
+  if len(strip_line) < 1:
+    strip_line = None
+  elif len(strip_line) == 1:
+    if strip_line in('a','i','o'):
+      my_dictionary.add(strip_line)
+  else:
+    my_dictionary.add(strip_line)
 f.close()
-
 
 starting_word = "startling"
 current_word = deepcopy(starting_word)
