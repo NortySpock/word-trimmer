@@ -41,6 +41,7 @@ for nine in niners:
   starting_word = nine
   current_word = deepcopy(starting_word)
   print "-"
+  print "Original:"+starting_word
   done = False
   while not done:
     for i in range(len(current_word)):
@@ -63,7 +64,7 @@ for nine in niners:
     if found_smaller_word:
       current_word = deepcopy(smaller_word)
     elif len(current_word) <= 1:
-      print("Success! " + current_word)
+      print("Success from word of length:"+str(len(starting_word)))
       
       #outfile.write()    
       done = True
