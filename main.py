@@ -48,7 +48,7 @@ for nine in niners:
     word_subset = []
     if found_smaller_word:
       current_word = deepcopy(smaller_word)
-    elif len(current_word) <= 1:
+    elif len(current_word) <= 1 and current_word in('a','i'):
       print("Success! length:"+str(len(starting_word)))
       for word in full_word_list:
         print(word)
